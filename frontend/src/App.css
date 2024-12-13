@@ -1,0 +1,226 @@
+/* App.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Adding a stylish font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #34d399, #10b981);
+  /* Green gradient background */
+  min-height: 100vh;
+  color: white;
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  /* Adding another stylish font */
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 50px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 20px;
+
+}
+
+.addvehicleinput {
+  width: 95%;
+  outline-color: #10b981;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Container styles */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  /* Set max width */
+  margin: 0 auto;
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.vehicle-form {
+  background-color: rgba(1, 1, 1, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  /* Max width for form */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  width: 70%;
+  /* Ensure input fills the container */
+}
+
+button {
+  background-color: #10b981;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #34d399;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #34d399;
+  /* Green */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Vehicle Table */
+.vehicle-table table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  overflow-x: auto;
+  /* Allow horizontal scrolling */
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #10b981;
+  color: white;
+}
+
+td {
+  background-color: #1f2937;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    /* Smaller text on mobile */
+    margin-top: 30px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .vehicle-form {
+    width: 100%;
+    max-width: 100%;
+    /* Allow form to fill screen width */
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+    /* Adjust font size for smaller screens */
+    padding: 8px;
+  }
+
+  .vehicle-table table {
+    font-size: 0.9rem;
+    /* Reduce font size on small screens */
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+    /* Adjust font size for tablets */
+  }
+
+  .vehicle-form {
+    width: 80%;
+  }
+
+  .vehicle-table table {
+    font-size: 1rem;
+    /* Slightly larger font for tablets */
+  }
+}
+
+/* Large screens / Desktops */
+@media (min-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+
+  .vehicle-form {
+    width: 60%;
+    /* Increase form width on larger screens */
+  }
+
+  .vehicle-table table {
+    font-size: 1.1rem;
+    /* Larger text for readability on desktops */
+  }
+}
